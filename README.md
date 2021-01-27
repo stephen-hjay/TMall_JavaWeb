@@ -4,7 +4,29 @@ A full-stack web application implementing MVC pattern based on JavaEE JSP, built
 Please Reference the Development Document for development detail.
 
 
-
+This system is divieded into two parts: 
+1. A front-stage for the user where a user could 
+ * Sign Up and Sign In 
+ * Browse all the categories without sign in.
+ * Browse all the items without sign in.
+ * See the details of the product in detail page (such as check the details, see the reviews from other customers)
+ * Purchase item to add it to the cart for later in product page (need to sign in).
+ * Manage the shopping cart, such as delete items, select items, and proceed to check out (need to sign in).
+ * Check out the order (fill in the detail information of the receiver) and track the status of the order (need to sign in).
+ * Confirm delivery and review the purchased product (need to sign in).
+ * Check all the orders of this user.
+ 
+ 
+ 2. A Back-Stage for the admin where the admin could manage the whole platform and process the order:
+  * Check all the items available on the platform;
+  * Organize all the items into different categories;
+  * Manage all the items (modify information, add new information, delete item);
+  * Manage all the products (modify product photos, modify information);
+  * Manage all the orders (check information, process order: delivery, see customer reviews);
+  * Manage all users;
+  
+  
+  
 ## Front-Stage - For User
 
 ### Home Page (No Need to Sign In)
