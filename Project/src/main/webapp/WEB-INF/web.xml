@@ -1,0 +1,71 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+
+  <!-- this filter is used as task distributing-->
+  <filter>
+    <filter-name>EncodingFilter</filter-name>
+    <filter-class>com.hjay.tmall.Filter.EncodingFilter</filter-class>
+    <init-param>
+      <param-name>EncodingCharSet</param-name>
+      <param-value>UTF-8</param-value>
+    </init-param>
+  </filter>
+  <filter>
+    <filter-name>BackServletFilter</filter-name>
+    <filter-class>com.hjay.tmall.Filter.BackServletFilter</filter-class>
+  </filter>
+
+  <filter>
+    <filter-name>ForeServletFilter</filter-name>
+    <filter-class>com.hjay.tmall.Filter.ForeServletFilter</filter-class>
+  </filter>
+  
+  <filter>
+    <filter-name>RefererFilter</filter-name>
+    <filter-class>com.hjay.tmall.Filter.RefererFilter</filter-class>
+  </filter>
+
+
+  <filter>
+    <filter-name>ForeAuthFilter</filter-name>
+    <filter-class>com.hjay.tmall.Filter.ForeAuthFilter</filter-class>
+  </filter>
+
+
+  <filter-mapping>
+    <filter-name>EncodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <filter-mapping>
+    <filter-name>ForeAuthFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+
+
+  <!--  The order of filter-mapping elements in web.xml determines the order in which the web container applies the filter to the servlet or JSP.
+  To reverse the order of the filter, you just need to reverse the filter-mapping elements in the web.xml file.-->
+
+  <filter-mapping>
+    <filter-name>BackServletFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <filter-mapping>
+    <filter-name>ForeServletFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <filter-mapping>
+    <filter-name>RefererFilter</filter-name>
+    <url-pattern>/buy.jsp</url-pattern>
+  </filter-mapping>
+
+
+</web-app>
+
